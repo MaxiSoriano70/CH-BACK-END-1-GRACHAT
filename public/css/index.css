@@ -1,0 +1,188 @@
+:root {
+    --color-1: #8d1b0b;
+    --color-2: #b01904;
+    --color-3: #1c7373;
+    --color-4: #005757;
+    --color-5 : #efefef;
+    --color-6 : #dcdcdc;
+    --color-fondo: #fff2f0;
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --color-gris: #3d3d3d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+.headerChat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-1);
+    color: var(--color-blanco);
+    padding: 15px 10px;
+}
+
+.logoHeader{
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.bienvenida{
+    margin: 0;
+}
+
+.mainGarChat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: var(--color-negro);
+    padding: 20px 10px;
+}
+
+.tituloChat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoBana{
+    width: 45px;
+    height: 45px;
+    clip-path: circle();
+}
+
+.txtBienvenida{
+    color: var(--color-blanco);
+    margin: 0;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.superChat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+
+.mensajes{
+    width: 75%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    background-color: var(--color-gris);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-5) transparent;
+}
+
+.mensajes::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mensajes::-webkit-scrollbar-thumb {
+    background-color: var(--color-5);
+    border-radius: 4px;
+}
+
+.mensajes::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.mensaje {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-5);
+    color: var(--color-negro);
+    border-radius: 20px;
+    margin: 5px 0px;
+    padding: 10px;
+    
+    /* Animación */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 0.3s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nombreUsuario{
+    margin: 0;
+    font-size: 18px;
+}
+
+.textoMensaje{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 475px) {
+    .mensajes{
+        width: 100%;
+    }
+}
+
+.inputNuevoMensaje{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footerChat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--color-1);
+}
+
+.textoFooter{
+    color: var(--color-blanco);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}

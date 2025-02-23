@@ -1,0 +1,20 @@
+<main class="mainGarChat">
+    <section class="tituloChat">
+        <img class="logoBana" src="./img/logoBenanero.jpg" alt="logo">
+        <h2 class="txtBienvenida">Bienvenido al GarChat HDMP</h2>
+    </section>
+    <section class="superChat">
+        <article class="mensajes" id="contenedorSuperChat">
+        </article>
+        <article class="inputNuevoMensaje p-2">
+            <form id="formSuperchat" class="d-flex w-100">
+                <input type="text" class="form-control bgInput me-2" id="inputSuperChat" placeholder="Escribe un mensaje..." style="flex: 4;">
+                <button type="submit" class="btn btnPersonalized1" style="flex: 1;">Enviar</button>
+            </form>
+        </article>
+
+
+    </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
